@@ -1,0 +1,52 @@
+*{
+    margin: 5px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Koulen-Regular.ttf','Jomolhari-Regular', sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+   
+}
+
+@font-face {
+    font-family:'Jomolhari-Regular' ;
+    src: url(Jomolhari-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Koulen-Regular' ;
+    src: url(Koulen-Regular.ttf);
+}
+
+h2{
+    list-style: none;
+    color: #ffffff;
+    display: inline;
+    font-family:Koulen-Regular;
+    font-style: normal;
+    overflow: hidden;
+    padding-bottom: 0;
+    padding-top:0 ;
+    position: relative;
+    text-overflow: ellipsis;
+    user-select: none;
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: 10;
+    
+}
+
+li a{
+    text-decoration: none;
+}
+
+h2:hover{
+    color: #ffe5c1;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight:11 ;
+}
