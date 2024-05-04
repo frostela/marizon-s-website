@@ -12,16 +12,16 @@
 }
 
 @font-face {
+    font-family: 'Koulen-Regular';
+    src: url(Koulen-Regular.ttf);
+}
+
+@font-face {
     font-family:'Jomolhari-Regular' ;
     src: url(Jomolhari-Regular.ttf);
 }
 
-@font-face {
-    font-family: 'Koulen-Regular' ;
-    src: url(Koulen-Regular.ttf);
-}
-
-h2{
+h2 {
     list-style: none;
     color: #ffffff;
     display: inline;

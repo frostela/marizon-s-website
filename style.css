@@ -65,6 +65,11 @@ nav span {
     src: url(Koulen-Regular.ttf);
 }
 
+@font-face {
+    font-family:'Jomolhari-Regular' ;
+    src: url(Jomolhari-Regular.ttf);
+}
+
 .bgvideo {
     position: relative;
     top: 0;
@@ -140,12 +145,12 @@ nav span {
         font-size: 3vh;
     }
 }
-.mid_container {
+.a_mid_container {
     width: 100%;
     z-index: 1;
     transition: top 0.5s, font-size 0.5s;
     left: 0;
-    padding: 2vw;
+    padding: 2vw 2vw 1.6vw 2vw;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(57, minmax(0, 0vw)); 
@@ -179,9 +184,96 @@ nav span {
     grid-row: 15 / auto;
 }
 
-.drinks{
+.drinks_video{
     width: 47vw;
     border-radius: 20px;
     grid-column: 2 / 3;
     grid-row: 21 / auto;
+}
+
+.b_mid_container{
+    width: 100%;
+    z-index: 1;
+    transition: top 0.5s, font-size 0.5s;
+    left: 0;
+    padding: 0 2vw 2vw 2vw;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(37, minmax(0, 0vw));;
+    gap: 2vw; 
+}
+
+.drinks2_video{
+    width: 22.5vw;
+    border-radius: 20px;
+    grid-column: 1 / 2 ;
+    grid-row: 1 / auto; 
+}
+
+.dj_video{
+    width: 71vw;
+    border-radius: 20px;
+    grid-column: 2 / 4 ;
+    grid-row: 1 / auto; 
+}
+
+.bts_video{
+    width: 71vw;
+    border-radius: 20px;
+    grid-column: 1 / 4 ;
+    grid-row: 22 / auto;
+}
+
+.gym_video{
+    width: 22.5vw;
+    border-radius: 20px;
+    grid-column: 4 / 5 ;
+    grid-row: 17 / auto;
+}
+
+.color_flim_video, .dj_video, .gym_video, .mount_video, .drinks2_video {
+    cursor: pointer;
+}
+
+.manu_container{
+    margin: 5px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Koulen-Regular.ttf','Jomolhari-Regular', sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+   
+}
+
+.manu_container h2 {
+    list-style: none;
+    color: #ffffff;
+    display: inline;
+    font-family:Koulen-Regular;
+    font-style: normal;
+    overflow: hidden;
+    padding-bottom: 0;
+    padding-top:0 ;
+    position: relative;
+    text-overflow: ellipsis;
+    user-select: none;
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: 10;
+    
+}
+
+.manu_container li a{
+    text-decoration: none;
+}
+
+.manu_container h2:hover{
+    color: #ffe5c1;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight:11 ;
 }
