@@ -30,9 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Get the height of the top container
     var topContainerHeight = topContainer.offsetHeight;
     
-    // Boolean flag to track if the navbar is already hidden
-    var navbarHidden = false;
-    
     // Add scroll event listener
     window.addEventListener("scroll", function() {
       // Get the scroll position
@@ -41,21 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
       // Calculate opacity based on scroll position
       var opacity = 1 - (scrollPosition / topContainerHeight);
     
-      // Apply opacity to the navbar if it's not already hidden
-      if (!navbarHidden) {
-        navbar.style.opacity = opacity.toFixed(2); // Limit opacity to two decimal places
-      }
-    
-      // Check if the navbar should be hidden
-      if (scrollPosition > topContainerHeight && !navbarHidden) {
-        // If it should be hidden, set the flag and hide the navbar
-        navbarHidden = true;
-        navbar.style.opacity = 0;
-      } else if (scrollPosition <= topContainerHeight && navbarHidden) {
-        // If it should be visible again, reset the flag and show the navbar
-        navbarHidden = false;
-        navbar.style.opacity = 1;
-      }
+      // Apply opacity to the navbar
+      navbar.style.opacity = opacity.toFixed(2); // Limit opacity to two decimal places
     });
 
     const primaryNav = document.querySelector('.primary-navigation');
