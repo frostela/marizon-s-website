@@ -273,7 +273,7 @@ nav span {
 }
 
 .x-icon{
-    width: 5%;
+    width: 4%;
     transition: width 0.1s;
     position: absolute; /* Add this line */
     top: 2%;
@@ -281,7 +281,7 @@ nav span {
 }
 
 .x-icon:hover{
-    width: 5.1%;
+    width: 4.1%;
     transform: scale(1.2);
     align-items: start;
 }
