@@ -26,23 +26,41 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var navbar = document.querySelector("nav");
     var topContainer = document.querySelector(".top-container");
-  
+    
     // Get the height of the top container
     var topContainerHeight = topContainer.offsetHeight;
-  
+    
     // Add scroll event listener
     window.addEventListener("scroll", function() {
       // Get the scroll position
       var scrollPosition = window.scrollY || window.pageYOffset;
-  
-      // Check if the scroll position is greater than the height of the top container
-      if (scrollPosition > topContainerHeight) {
-        // If it is, hide the navbar visually
-        navbar.style.visibility = "hidden";
+    
+      // Calculate opacity based on scroll position
+      var opacity = 1 - (scrollPosition / topContainerHeight);
+    
+      // Apply opacity to the navbar
+      navbar.style.opacity = opacity.toFixed(2); // Limit opacity to two decimal places
+    });
+
+    const primaryNav = document.querySelector('.primary-navigation');
+    const navToggle = document.querySelector('.nav_toggle');
+    const backButton = document.querySelector('.back-butt');
+
+    navToggle.addEventListener('click', () => {
+      const visibility = primaryNav.getAttribute('data-visible');
+
+      if (visibility === "false" || visibility === null) {
+        primaryNav.setAttribute('data-visible', true);
+        navToggle.setAttribute('aria-expanded', true);
       } else {
-        // Otherwise, show the navbar
-        navbar.style.visibility = "visible";
+        primaryNav.setAttribute('data-visible', false);
+        navToggle.setAttribute('aria-expanded', false);
       }
     });
 
+    backButton.addEventListener('click', () => {
+      primaryNav.setAttribute('data-visible', false);
+      navToggle.setAttribute('aria-expanded', false);
+    });
+    
   });

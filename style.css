@@ -6,6 +6,10 @@
 
 }
 
+body{
+    overflow-x:hidden;
+}
+
 nav {
     width: 100%;
     position: fixed;
@@ -235,45 +239,70 @@ nav span {
     cursor: pointer;
 }
 
-.manu_container{
-    margin: 5px;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Koulen-Regular.ttf','Jomolhari-Regular', sans-serif;
-    background-color: black;
+.primary-navigation{
+    position: fixed;
+    inset: 0 0 0 20%;
+    background: hsla(0, 0%, 0%, 0.5);
+    z-index: 5;
     display: flex;
+    text-decoration: none;
     flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-   
+    padding: min(30vh, 20rem) 5em;
+    font-family: 'Koulen-Regular.ttf','Jomolhari-Regular', sans-serif;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
 }
 
-.manu_container h2 {
-    list-style: none;
+.primary-navigation[data-visible ='true']{
+    transform: translateX(0%);
+}
+
+.primary-navigation a{
+    font-family: Koulen-Regular, Jomolhari-Regular, sans-serif;
     color: #ffffff;
-    display: inline;
-    font-family:Koulen-Regular;
+    text-decoration: none;
     font-style: normal;
-    overflow: hidden;
-    padding-bottom: 0;
-    padding-top:0 ;
-    position: relative;
-    text-overflow: ellipsis;
-    user-select: none;
-    white-space: nowrap;
-    font-size: 30px;
-    font-weight: 10;
-    
+    font-size: 2vw;
 }
 
-.manu_container li a{
-    text-decoration: none;
+@supports (backdrop-filter: blur(3em)){
+    .primary-navigation{
+        background: hsla(0, 0%, 1%, 0.658);
+        backdrop-filter: blur(2em) ;
+    }
 }
 
-.manu_container h2:hover{
-    color: #ffe5c1;
+.x-icon{
+    width: 5%;
+    transition: width 0.1s;
+    position: absolute; /* Add this line */
+    top: 2%;
+    left: 2%;
+}
+
+.x-icon:hover{
+    width: 5.1%;
+    transform: scale(1.2);
+    align-items: start;
+}
+
+.back-butt {
     cursor: pointer;
-    text-decoration: none;
-    font-size: 32px;
-    font-weight:11 ;
+    background-color: transparent;
+    border: none ;
+    top: 0;
 }
+
+
+.primary-navigation li{
+    list-style-type:none;
+    margin-bottom: 2.5%;
+}
+
+button.nav_toggle{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+

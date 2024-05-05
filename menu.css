@@ -1,4 +1,4 @@
-*{
+.manu_container{
     margin: 5px;
     padding: 0;
     box-sizing: border-box;
@@ -11,17 +11,7 @@
    
 }
 
-@font-face {
-    font-family: 'Koulen-Regular';
-    src: url(Koulen-Regular.ttf);
-}
-
-@font-face {
-    font-family:'Jomolhari-Regular' ;
-    src: url(Jomolhari-Regular.ttf);
-}
-
-h2 {
+.manu_container h2 {
     list-style: none;
     color: #ffffff;
     display: inline;
@@ -39,11 +29,11 @@ h2 {
     
 }
 
-li a{
+.manu_container li a{
     text-decoration: none;
 }
 
-h2:hover{
+.manu_container h2:hover{
     color: #ffe5c1;
     cursor: pointer;
     text-decoration: none;

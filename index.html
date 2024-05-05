@@ -18,9 +18,27 @@
         <h1>MARIZONX</h1>
       </div>
     </a>
-    <a href="menubar.html" id="openMenu"><img src="contents/Group_1.png" alt="menubar" class="menubar"></a>
+    <button class="nav_toggle" aria-controls="primary-navigation" aria-expanded="false">
+      <img src="contents/Group_1.png" alt="menubar" class="menubar">
+    </button>
   </nav>
-  
+
+  <div class="manu_container">
+    <ul id="primary-navigation" data-visible="false" class="primary-navigation">
+      <button class="back-butt" aria-controls="primary-navigation" aria-expanded="false">
+       <img class="x-icon" src="contents/x_icon.svg" alt="x">
+    </button>
+      <li class="active">
+        <a href="index.html" target="_self"><span aria-hidden="true"></span>Home
+        </a>
+      <li>
+        <a href="index.html" target="_self"><span aria-hidden="true"></span>About
+        </a>
+      <li>
+        <a href="index.html" target="_self"><span aria-hidden="true"></span>Contact
+        </a>
+    </ul>
+  </div>
 
   <div class="top-container">
 
@@ -36,16 +54,16 @@
   </div>
 
   <div class="a_mid_container">
-    
+
     <video autoplay loop muted class="mount_video">
       <source src="contents/Mount.mp4" type="video/mp4">
     </video>
 
     <img class="my_works_img" src="contents/my_works.png" alt="my_works">
 
-      <video autoplay loop muted class="color_flim_video">
-        <source src="contents/colors_flims.mp4" type="video/mp4">
-      </video>
+    <video autoplay loop muted class="color_flim_video">
+      <source src="contents/colors_flims.mp4" type="video/mp4">
+    </video>
 
     <video autoplay loop muted class="j_com_video">
       <source src="contents/j_com.mp4" type="video/mp4">
@@ -56,7 +74,7 @@
     </video>
 
   </div>
-  
+
   <div class="b_mid_container">
 
     <video autoplay loop muted class="drinks2_video">
@@ -70,7 +88,7 @@
     <video autoplay loop muted class="bts_video">
       <source src="contents/bts.mp4" type="video/mp4">
     </video>
-    
+
     <video autoplay loop muted class="gym_video">
       <source src="contents/gym.mp4" type="video/mp4">
     </video>
