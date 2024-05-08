@@ -69,11 +69,6 @@ nav span {
     src: url(Koulen-Regular.ttf);
 }
 
-@font-face {
-    font-family:'Jomolhari-Regular' ;
-    src: url(Jomolhari-Regular.ttf);
-}
-
 .bgvideo {
     position: relative;
     top: 0;
@@ -241,16 +236,25 @@ nav span {
 
 .primary-navigation{
     position: fixed;
-    inset: 0 0 0 20%;
-    background: hsla(0, 0%, 0%, 0.5);
+    inset: 0 0 0 0%;
+    background: hsla(0, 0%, 0%, 0.534);
     z-index: 5;
     display: flex;
     text-decoration: none;
     flex-direction: column;
     padding: min(30vh, 20rem) 5em;
-    font-family: 'Koulen-Regular.ttf','Jomolhari-Regular', sans-serif;
+    font-family: 'Koulen-Regular.ttf', sans-serif;
     transform: translateX(100%);
     transition: transform 350ms ease-out;
+    align-items: center;
+    justify-content: center; 
+}
+
+@supports (backdrop-filter: blur(3em)){
+    .primary-navigation{
+        background: hsla(0, 0%, 0%, 0.712);
+        backdrop-filter: blur(2em) ;
+    }
 }
 
 .primary-navigation[data-visible ='true']{
@@ -259,21 +263,18 @@ nav span {
 
 .primary-navigation a{
     font-family: Koulen-Regular, Jomolhari-Regular, sans-serif;
-    color: #ffffff;
+    color: #FFE9CA;
     text-decoration: none;
     font-style: normal;
-    font-size: 2vw;
+    font-size: 200%;
 }
 
-@supports (backdrop-filter: blur(3em)){
-    .primary-navigation{
-        background: hsla(0, 0%, 1%, 0.658);
-        backdrop-filter: blur(2em) ;
-    }
+.primary-navigation a:hover{
+    color: #998569;
 }
 
 .x-icon{
-    width: 3%;
+    width: 3vw;
     transition: width 0.1s;
     position: absolute; /* Add this line */
     top: 2%;
@@ -305,4 +306,12 @@ button.nav_toggle{
     cursor: pointer;
 }
 
+#preloader{
+    background: rgb(255, 255, 255) url(contents/loader.gif) no-repeat center center;
+    background-size: 7%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
 

@@ -63,4 +63,10 @@ document.addEventListener("DOMContentLoaded", function() {
       navToggle.setAttribute('aria-expanded', false);
     });
     
+    var loader = document.getElementById('preloader');
+    window.addEventListener('load', function(){
+      loader.style.display = 'none';
+    });
+
+    
   });
