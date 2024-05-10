@@ -307,7 +307,7 @@ button.nav_toggle{
     cursor: pointer;
 }
 
-#preloader{
+/* #preloader{
     background: rgb(255, 255, 255) url(contents/loader.gif) no-repeat center center ;
     background-size: 7%;
     height: 100vh;
@@ -315,5 +315,5 @@ button.nav_toggle{
     position: fixed;
     z-index: 100;
     
-}
+} */
 
