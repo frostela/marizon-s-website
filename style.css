@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Koulen-Regular.ttf', 'Jomolhari-Regular', sans-serif;
+    font-family: 'Koulen-Regular', 'Jomolhari-Regular', sans-serif;
 
 }
 
@@ -46,7 +46,7 @@ nav span {
 
 .content h1 {
     color: #ffffff;
-    font-family: ProzaLibre-BoldItalic;
+    font-family: 'ProzaLibre-BoldItalic', sans-serif;
     font-style: normal;
     font-size: 2vw;
     font-weight: 600;
@@ -92,7 +92,7 @@ nav span {
 .main_title {
     font-size: 2.6vw;
     color: #ffffff;
-    font-family: Koulen-Regular;
+    font-family: 'Koulen-Regular',sans-serif ;
     font-weight: 200;
     text-align: left;
     transition: font-size 0.5s;
@@ -112,7 +112,7 @@ nav span {
 
 .main_subtitle {
     color: #ffffff;
-    font-family: Koulen-Regular;
+    font-family: 'Koulen-Regular', sans-serif;
     font-size: 1vw;
     font-weight: 100;
     text-align: left;
@@ -165,6 +165,7 @@ nav span {
 
 .my_works_img{
     width: 47vw;
+    height: auto;
     grid-column: 2 / 3;
     grid-row:1 / auto;
 }
@@ -243,7 +244,7 @@ nav span {
     text-decoration: none;
     flex-direction: column;
     padding: min(30vh, 20rem) 5em;
-    font-family: 'Koulen-Regular.ttf', sans-serif;
+    font-family: 'Koulen-Regular', sans-serif;
     transform: translateX(100%);
     transition: transform 350ms ease-out;
     align-items: center;
@@ -262,7 +263,7 @@ nav span {
 }
 
 .primary-navigation a{
-    font-family: Koulen-Regular, Jomolhari-Regular, sans-serif;
+    font-family: 'Koulen-Regular', sans-serif;
     color: #FFE9CA;
     text-decoration: none;
     font-style: normal;
@@ -307,11 +308,12 @@ button.nav_toggle{
 }
 
 #preloader{
-    background: rgb(255, 255, 255) url(contents/loader.gif) no-repeat center center;
+    background: rgb(255, 255, 255) url(contents/loader.gif) no-repeat center center ;
     background-size: 7%;
     height: 100vh;
     width: 100%;
     position: fixed;
     z-index: 100;
+    
 }
 
