@@ -168,6 +168,7 @@ nav span {
     height: auto;
     grid-column: 2 / 3;
     grid-row:1 / auto;
+    border-radius: 20px;
 }
 
 .color_flim_video{
@@ -211,7 +212,7 @@ nav span {
 }
 
 .dj_video{
-    width: 71vw;
+    width: 71.5vw;
     border-radius: 20px;
     grid-column: 2 / 4 ;
     grid-row: 1 / auto; 
@@ -307,4 +308,9 @@ button.nav_toggle{
     cursor: pointer;
 }
 
-
+@media (max-width: 767px){
+    nav{
+        background-color:black ;
+        position: relative;
+    }
+}
