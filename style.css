@@ -48,7 +48,7 @@ nav span {
     color: #ffffff;
     font-family: 'ProzaLibre-BoldItalic', sans-serif;
     font-style: normal;
-    font-size: 2vw;
+    font-size: 4vh;
     font-weight: 600;
     text-align: center;
     padding: 0;
@@ -90,7 +90,7 @@ nav span {
     z-index: 2;
 }
 .main_title {
-    font-size: 2.6vw;
+    font-size: 2.5vw;
     color: #ffffff;
     font-family: 'Koulen-Regular',sans-serif ;
     font-weight: 200;
@@ -104,7 +104,7 @@ nav span {
     padding: 0;
     border: 0;
     width: 5vw;
-    height: 0.5vh;
+    height: 0.8vh;
     background-color: #42ffed;
     transition: margin-bottom 0.5s;
     top: 85%;
@@ -200,7 +200,7 @@ nav span {
     padding: 0 2vw 2vw 2vw;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(37, minmax(0, 0vw));;
+    grid-template-rows: repeat(37, minmax(0, 0vw));
     gap: 2vw; 
 }
 
@@ -308,9 +308,287 @@ button.nav_toggle{
     cursor: pointer;
 }
 
+/* main text fixs */
+
+@media (min-width: 768px) and (max-width: 1070px){
+
+    .menubar {
+        width: 5vh;
+        height: auto;
+    }
+    
+    .logo {
+        width: 7vh;
+        height: auto;
+        transition: width 0.5s;
+    }
+
+    .content h1 {
+        color: #ffffff;
+        font-size: 3vh;
+        font-weight: 600;
+        transition: font-size 0.5s;
+    }
+
+    .main_title {
+        font-size: 3vw;
+        font-weight: 150;
+        transition: font-size 0.5s;
+        top:76%;
+    }
+    
+    .main_line {
+        width: 7vw;
+        height: 0.5vh;
+        transition: margin-bottom 0.5s;
+        top: 85.5%;
+    }
+    
+    .main_subtitle {
+        color: #ffffff;
+        font-size: 1.5vw;
+        font-weight: 0;
+        text-align: left;
+        transition: font-size 0.5s;
+        top: 86%;
+    }
+    .x-icon{
+        width: 8vw;
+        transition: width 0.1s;
+        position: absolute; /* Add this line */
+        top: 2%;
+        left: 2%;
+    }
+}
+
+
+
+/* Mobile Styles */
+
 @media (max-width: 767px){
     nav{
         background-color:black ;
         position: relative;
+    }
+    .menubar {
+        width: 3.5vh;
+        height: auto;
+    }
+    
+    .logo {
+        width: 6vh;
+        height: auto;
+        transition: width 0.5s;
+    }
+
+    .content h1 {
+        color: #ffffff;
+        font-size: 2vh;
+        font-weight: 600;
+        transition: font-size 0.5s;
+    }
+
+    button.nav_toggle{
+        padding-right: 5px;
+        transition: width 0.5s;
+    }
+
+    .bgvideo {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .main_title, .main_line, .main_subtitle {
+        position: absolute;
+        left: 5%;
+        z-index: 2;
+    }
+    .main_title {
+        font-size: 6vw;
+        font-weight: 150;
+        transition: font-size 0.5s;
+        top:76%;
+    }
+    
+    .main_line {
+        width: 15vw;
+        height: 0.5vh;
+        transition: margin-bottom 0.5s;
+        top: 85%;
+    }
+    
+    .main_subtitle {
+        color: #ffffff;
+        font-size: 3vw;
+        font-weight: 0;
+        text-align: left;
+        transition: font-size 0.5s;
+        top: 86%;
+    }
+    
+    .a_mid_container {
+        transition: top 0.5s, font-size 0.5s;
+        left: 0;
+        padding: 2vw 2vw 1.6vw 2vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(116, minmax(0, 2vw));
+        gap: 2vw; 
+    }
+    
+    .mount_video{
+        width: 100%;
+        border-radius: 15px;
+        grid-column: 1 / 2;
+        grid-row: 7 / auto;
+    }
+    
+    .my_works_img{
+        width: 100%;
+        height: auto;
+        grid-column: 1 / 2;
+        grid-row:1 / auto;
+        border-radius: 15px;
+    }
+    
+    .color_flim_video{
+        width: 100%;
+        border-radius: 15px;
+        grid-column: 1 / 2;
+        grid-row: 65 / auto;
+    }
+    
+    .j_com_video{
+        width: 100%;
+        border-radius: 15px;
+        grid-column: 1 / 2;
+        grid-row: 21 / auto;
+    }
+    
+    .drinks_video{
+        width: 100%;
+        border-radius: 15px;
+        grid-column: 1 / 2;
+        grid-row: 80 / auto;
+    }
+
+    .b_mid_container{
+        width: 100%;
+        z-index: 1;
+        transition: top 0.5s, font-size 0.5s;
+        left: 0;
+        padding: 2vw 2vw 2vw 2vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(109, minmax(0, 2vw));
+        gap: 2vw; 
+    }
+    
+    .drinks2_video{
+        width: 100%;
+        border-radius: 15px;
+        grid-column: 1 / 2 ;
+        grid-row: 67 / auto; 
+    }
+    
+    .dj_video{
+        width: 100%;
+        border-radius: 15px;
+        grid-column:1 / 2 ;
+        grid-row: 1 / auto; 
+    }
+    
+    .bts_video{
+        width: 100%;
+        border-radius: 15px;
+        grid-column: 1 / 2 ;
+        grid-row: 56 / auto;
+    }
+    
+    .gym_video{
+        width: 100%;
+        border-radius: 15px;
+        grid-column: 1 / 2 ;
+        grid-row: 12 / auto;
+    }
+
+    .x-icon{
+        width: 10vw;
+        transition: width 0.1s;
+        position: absolute; /* Add this line */
+        top: 2%;
+        left: 2%;
+    }
+}
+
+@media (min-width: 440px) and (max-width: 766px){
+    .main_title {
+        font-size:35px;
+        font-weight: 150;
+        transition: font-size 0.5s;
+        top:76%;
+    }
+    
+    .main_line {
+        width: 12vw;
+        height: 0.8vh;
+        transition: margin-bottom 0.5s;
+        top: 87%;
+    }
+    
+    .main_subtitle {
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 0;
+        text-align: left;
+        transition: font-size 0.5s;
+        top: 88%;
+    }
+}
+
+@media (min-width: 289px) and (max-width: 439px){
+    .main_title {
+        font-size: 30px;
+        font-weight: 150;
+        transition: font-size 0.5s;
+        top:76%;
+    }
+    
+    .main_line {
+        width: 20vw;
+        height: 5px;
+        transition: margin-bottom 0.5s;
+        top: 86%;
+    }
+    
+    .main_subtitle {
+        font-size: 15px;
+        transition: font-size 0.5s;
+        top: 87%;
+    }
+}
+
+@media (min-width: 100px) and (max-width: 290px){
+    .main_title {
+        font-size: 30px;
+        font-weight: 150;
+        transition: font-size 0.5s;
+        top:76%;
+    }
+    
+    .main_line {
+        width: 20vw;
+        height: 6px;
+        transition: margin-bottom 0.5s;
+        top: 85.5%;
+    }
+    
+    .main_subtitle {
+        font-size: 15px;
+        transition: font-size 0.5s;
+        top: 86%;
     }
 }
