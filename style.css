@@ -30,20 +30,11 @@ nav {
     height: auto;
 }
 
-img.menubar {
-    width: 5vh;
-    height: auto;
-}
-
 .logo {
     width: 8vh;
     height: auto;
 }
 
-img.logo {
-    width: 8vh;
-    height: auto;
-}
 
 nav span {
     opacity: 0;
