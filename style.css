@@ -30,7 +30,17 @@ nav {
     height: auto;
 }
 
+img.menubar {
+    width: 5vh;
+    height: auto;
+}
+
 .logo {
+    width: 8vh;
+    height: auto;
+}
+
+img.logo {
     width: 8vh;
     height: auto;
 }
@@ -62,11 +72,13 @@ nav span {
 @font-face {
     font-family: 'ProzaLibre-BoldItalic';
     src: url(ProzaLibre-BoldItalic.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Koulen-Regular';
     src: url(Koulen-Regular.ttf);
+    font-display: swap;
 }
 
 .bgvideo {
@@ -169,6 +181,11 @@ nav span {
     grid-column: 2 / 3;
     grid-row:1 / auto;
     border-radius: 20px;
+}
+
+img.my_works_img{
+    width: 47vw;
+    height: auto;
 }
 
 .color_flim_video{
