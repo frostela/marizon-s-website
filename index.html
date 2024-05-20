@@ -81,7 +81,8 @@
     <div class="top-container">
 
       <video autoplay loop muted class="bgvideo" loading="lazy">
-        <source src="contents/main_video.mp4" fetchpriority="high" type="video/mp4">
+        <source src="contents/main_video.mp4" fetchpriority="high" type="video/mp4" media="(min-width: 800px)">
+        <source src="contents/Main Video-Small.mp4" type="video/mp4" media="(max-width: 799px)">
       </video>
 
       <h2 class="main_title">MY WORKS</h2>
@@ -94,8 +95,8 @@
     <div class="a_mid_container">
 
       <video autoplay loop muted class="mount_video">
-        <source src="contents/Mount.mp4" fetchpriority="high" type="video/mp4" media="(min-width: 800px)">
-        <source src="contents/Main Video-Small.mp4" type="video/mp4" media="(max-width: 799px)">
+        <source src="contents/Mount.mp4" fetchpriority="high" type="video/mp4">
+        
       </video>
 
       <img class="my_works_img" src="contents/my_works.png" fetchpriority="low" alt="my_works">
