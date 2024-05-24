@@ -384,7 +384,7 @@ button.nav_toggle {
 .fotterbg {
     position: relative;
     width: 100vw;
-    height: 40vh;
+    height: 320px;
     background-color: black;
     z-index: 2;
 }
@@ -432,6 +432,25 @@ img.yt{
 
 .ytcl{
     align-self: center;
+}
+
+.cdet{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 40px;
+}
+
+.cdeth1{
+    color: #ffffff;
+    font-weight: 200;
+    transition: font-size 0.5s;
+    z-index: 5;
+    text-align: center;
+
+    position: relative;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Tab view */
