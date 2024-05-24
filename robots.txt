@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: 
+Disallow: 
+Allow: /
+
+Sitemap: https://www.marizonx.com/sitemap.xml
