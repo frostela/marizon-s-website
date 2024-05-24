@@ -311,7 +311,46 @@ button.nav_toggle{
     cursor: pointer;
 }
 
-/* main text fixs */
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transition: opacity 0.75s visibility 0.75s;
+    z-index: 20;
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #ffffff;
+    border-top-color: #c78d3c;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading{
+    from{
+        transition: rotate(0turn);
+    }
+
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+/* Tab view */
 
 @media (min-width: 768px) and (max-width: 1070px){
 
@@ -595,3 +634,4 @@ button.nav_toggle{
         top: 86%;
     }
 }
+

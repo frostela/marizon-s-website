@@ -62,5 +62,13 @@ document.addEventListener("DOMContentLoaded", function() {
       primaryNav.setAttribute('data-visible', false);
       navToggle.setAttribute('aria-expanded', false);
     });
+
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+      loader.classList.add("loader-hidden");
+      loader.addEventListener("transitonend",() => {
+        document.body.removeChild("loader");
+      })
+    });
     
   });
