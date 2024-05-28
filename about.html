@@ -1,13 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marizonx</title>
+    <link rel="stylesheet" href="style.css">
+    <meta itemprop="datePublished" content="2024-05-08">
+    <meta itemprop="dateModified" content="2024-05-08">
+    <meta itemprop="mainEntityOfPage" content="https://marizonx.com">
+    <meta itemprop="image" content="https://marizonx.com/contents/logo.png">
+    <meta itemprop="publisher" content="Marizonx">
 </head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Koulen-Regular', 'Jomolhari-Regular', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    body {
+            background-color: black;
+            color: white; /* Ensure default text color is visible on black background */
+        }
+    .main_container{
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        transition: top 0.5s, font-size 0.5s;
+        left: 0;
+        padding: 6vw 2vw 2vw 2vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 2vw;
+        top: 20%;
+
+    }
+    
+    .my_img{
+        width: 47vw;
+        height: auto;
+        grid-column: 2 / 3;
+        grid-row: 1 / auto;
+        border-radius: 20px;
+    }
+
+    .aboutme_txt{
+        width: 47vw;
+        height: auto;
+        grid-column: 1 / 2;
+        grid-row: 1 / auto;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .aboutme_txt h2{
+        font-size:3vw;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        padding:2vw 2vw 0 2vw;
+        font-family: 'Black_Emerald', sans-serif, serif;
+        background-color: white;
+        border-radius: 20px;
+        font-weight: 400;
+    }
+
+    .aboutme_txt h4{
+        font-size: 1.5vw;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        padding: 2vw 2vw 2vw 2vw;
+        font-family: Arial, sans-serif, serif;
+        background-color: white;
+        border-radius: 20px;
+        font-weight: 400;
+    }
+
+</style>
 <body>
+    <!-- Uncomment if loader is needed -->
     <div class="loader"></div>
-    <h1>Work in progress</h1>
-    <a href="./"><h3>Go back</h1></a>
+
+    <header>
+        <nav>
+            <a href="./" target="_self"><img src="contents/logo.png" fetchpriority="high" alt="logo_image" class="logo"></a>
+            <a href="./" target="_self" class='content_a'>
+                <div class="content">
+                    <h1>ABOUT ME</h1>
+                </div>
+            </a>
+            <button class="nav_toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <img src="contents/manu_barimg.png" fetchpriority="high" alt="menubar" class="menubar">
+            </button>
+        </nav>
+
+        <div class="manu_container">
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation">
+                <button class="back-butt" aria-controls="primary-navigation" aria-expanded="false">
+                    <img class="x-icon" src="contents/x_icon.svg" alt="x">
+                </button>
+                <li class="active">
+                    <a href="./" target="_self"><span aria-hidden="true"></span>Home</a>
+                </li>
+                <li>
+                    <a href="./about" target="_self"><span aria-hidden="true"></span>About</a>
+                </li>
+                <li>
+                    <a id="contactMeButton" href="#"><span aria-hidden="true"></span>Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_container">
+            <img class="my_img" src="contents/marizon_pic.png" fetchpriority="low" alt="my_image">
+            <div class="aboutme_txt">
+                <h2> Marizonx aka Anirban Das</h2>
+                <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Cum consectetur quibusdam culpa est officiis harum commodi 
+                    repellendus eveniet ab tempora earum libero cupiditate quo 
+                    blanditiis at, quasi qui, sit perferendis? Quod quasi quam 
+                    molestiae tempora eos, eligendi praesentium delectus necessitatibus 
+                    accusamus quia, sit rerum, modi placeat totam velit veritatis 
+                    perferendis explicabo reprehenderit. Fuga sint molestiae rem error, 
+                    harum dicta saepe autem minima, dolores, magni voluptatem!
+                    Beatae repellat distinctio esse aspernatur nesciunt, omnis iure fuga ea. 
+                    Suscipit earum excepturi voluptates dolores nostrum adipisci 
+                    saepe cumque tempora. Earum, hic voluptate. Maxime odio officia 
+                    repudiandae at tempora quidem necessitatibus doloribus impedit quis natus.
+                </h4>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="fotterbg">
+            <div class="fottglass">
+              <div class="fotttext">
+                <h1 class="conh1">Let's Connect</h1>
+                <div class="scicons">
+                  <a class="ytcl" target="_blank" href="https://www.instagram.com/marizonx/"><img
+                      src="contents/instagram-white-icon.webp" alt="instagram" class="ig"></a>
+                  <a class="ytcl" target="_blank" href="http://Wa.me/919674890591/"><img src="contents/whatsapp.png"
+                      alt="Whatsapp" class="wapp"></a>
+                  <a class="ytcl" target="_blank" href="https://www.linkedin.com/in/marizonx/"><img
+                      src="contents/linkedin-app-white-icon.webp" alt="Linkedin" class="Lin"></a>
+                  <a class="ytcl" target="_blank" href="https://www.youtube.com/@anirbandass/"><img
+                      src="contents/youtube.webp" alt="youtube" class="yt"></a>
+                </div>
+              
+                <div id="footer" class="cdet">
+                  <h4 class="cdeth1">+91 967-489-0591</h4>
+                  <h4 class="cdeth1">freelance@marizonx.com</h4>
+                  <h4 class="cdeth1">Marizonx</h4>
+              </div>
+              
+            </div>
+            <p class="crs"> &copy; <span id="currentYear"></span></p>
+            <p class="siteby"><a target="_blank" href="https://frostela.com">Site by Frostela</a></p>
+          </div>
+        </div>
+      </footer>
+    
+    <script>
+        // Navbar opacity on scroll
+        const navbar = document.querySelector("nav");
+        const topContainer = document.querySelector(".top-container");
+        if (topContainer) {
+            const topContainerHeight = topContainer.offsetHeight;
+
+            window.addEventListener("scroll", function () {
+                const scrollPosition = window.scrollY || window.pageYOffset;
+                const opacity = 1 - (scrollPosition / topContainerHeight);
+                navbar.style.opacity = opacity.toFixed(2);
+            });
+        }
+
+        // Burger menu toggle
+        const primaryNav = document.querySelector('.primary-navigation');
+        const navToggle = document.querySelector('.nav_toggle');
+        const backButton = document.querySelector('.back-butt');
+
+        if (navToggle && backButton && primaryNav) {
+            navToggle.addEventListener('click', () => {
+                const visibility = primaryNav.getAttribute('data-visible');
+                if (visibility === "false" || visibility === null) {
+                    primaryNav.setAttribute('data-visible', true);
+                    navToggle.setAttribute('aria-expanded', true);
+                } else {
+                    primaryNav.setAttribute('data-visible', false);
+                    navToggle.setAttribute('aria-expanded', false);
+                }
+            });
+
+            backButton.addEventListener('click', () => {
+                primaryNav.setAttribute('data-visible', false);
+                navToggle.setAttribute('aria-expanded', false);
+            });
+
+            document.querySelectorAll('.primary-navigation a').forEach(link => {
+                link.addEventListener('click', () => {
+                    primaryNav.setAttribute('data-visible', false);
+                    navToggle.setAttribute('aria-expanded', false);
+                });
+            });
+        }
+
+        // Loader
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
+            if (loader) {
+                loader.classList.add("loader-hidden");
+                loader.addEventListener("transitionend", () => {
+                    document.body.removeChild(loader);
+                });
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Contact Me button scroll
+        const contactMeButton = document.getElementById('contactMeButton');
+        if (contactMeButton) {
+            contactMeButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                const footer = document.getElementById('footer');
+                if (footer) {
+                    footer.scrollIntoView({ behavior: 'smooth' });
+                }
+                // Close the burger menu if open
+                primaryNav.setAttribute('data-visible', false);
+                navToggle.setAttribute('aria-expanded', false);
+            });
+        }
+
+        // Set current year in the footer
+        const currentYearElement = document.getElementById("currentYear");
+        if (currentYearElement) {
+            currentYearElement.innerHTML = new Date().getFullYear();
+        }
+    </script>
 </body>
+
 </html>
