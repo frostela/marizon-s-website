@@ -808,6 +808,11 @@ img.yt:hover{
         font-size: 10px;
         z-index: 10;
     }
+
+    .crs {
+        font-size: 10px;
+    
+    }
 }
 
 @media (min-width: 440px) and (max-width: 766px) {

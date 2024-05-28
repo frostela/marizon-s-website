@@ -112,4 +112,35 @@ document.addEventListener("DOMContentLoaded", function () {
       behavior: "smooth"
     });
   });
+
+  // Video playback control for mobile and tablet
+  const videos = document.querySelectorAll(".myVideo");
+
+  function isMobileOrTablet() {
+    return window.innerWidth <= 1024;
+  }
+
+  function handleVideoPlayback() {
+    videos.forEach(video => {
+      video.addEventListener("play", () => {
+        if (isMobileOrTablet()) {
+          videos.forEach(otherVideo => {
+            if (otherVideo !== video) {
+              otherVideo.pause();
+            }
+          });
+        }
+      });
+    });
+  }
+
+  if (isMobileOrTablet()) {
+    handleVideoPlayback();
+  }
+
+  window.addEventListener("resize", () => {
+    if (isMobileOrTablet()) {
+      handleVideoPlayback();
+    }
+  });
 });

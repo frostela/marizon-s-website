@@ -22,9 +22,9 @@
     }
 
     body {
-            background-color: black;
-            color: white; /* Ensure default text color is visible on black background */
-        }
+        background-color: black;
+        color: white; /* Ensure default text color is visible on black background */
+    }
     .main_container{
         position: relative;
         width: 100%;
@@ -77,6 +77,62 @@
         background-color: white;
         border-radius: 20px;
         font-weight: 400;
+    }
+
+    @media (max-width: 767px) {
+
+        .main_container{
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            transition: top 0.5s, font-size 0.5s;
+            left: 0;
+            padding: 6vw 2vw 2vw 2vw;
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr 1fr;
+            gap: 2vw;
+            top: 20%;
+            justify-content: center;
+        }
+
+        .my_img{
+            width: 96vw;
+            height: auto;
+            grid-column: 1 / 2;
+            grid-row: 1 / auto;
+            border-radius: 20px;
+        }
+
+        .aboutme_txt{
+            width: 96vw;
+            height: auto;
+            grid-column: 1 / 2;
+            grid-row: 2 / auto;
+            border-radius: 20px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .aboutme_txt h2{
+            font-size:6vw;
+            
+        }
+
+        .aboutme_txt h4{
+            font-size: 3.5vw;
+            color: rgb(0, 0, 0);
+            text-align: justify;
+            padding: 2vw 2vw 2vw 2vw;
+            font-family: Arial, sans-serif, serif;
+            background-color: white;
+            border-radius: 20px;
+            font-weight: 400;
+        }
+        
+
     }
 
 </style>
