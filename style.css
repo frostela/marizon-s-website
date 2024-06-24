@@ -10,6 +10,34 @@ body {
     overflow-x: hidden;
 }
 
+/* Hide the scrollbar for Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: #ffffff;
+}
+
+/* Customize scrollbar track */
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Customize scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+    background-color: #776e61;
+    border-radius: 10px;
+}
+
+/* Show scrollbar on hover */
+body:hover::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Optional: Customize scrollbar corner */
+body::-webkit-scrollbar-corner {
+    background-color: #ffffff;
+}
+
+
 nav {
     width: 100%;
     position: fixed;
@@ -171,7 +199,7 @@ nav span {
     left: 0;
     padding: 2vw 2vw 1.6vw 2vw;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(57, minmax(0, 0vw));
     gap: 2vw;
 }
@@ -261,7 +289,7 @@ nav span {
     width: 47vw;
     border-radius: 20px;
     grid-column:2 / 4 ;
-    grid-row: 22 / auto;
+    grid-row: 22/ auto;
     background-image: url(contents/dadu_flim_blur.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -397,20 +425,47 @@ button.nav_toggle {
     }
 }
 
-.fotterbg {
+
+
+/* .fotterbg {
     position: relative;
-    width: auto;
-    height: 80vh;
+    width: 100%;
+    height: 100%;
     background-color: black;
     background-image: url(contents/giphy2.gif);
     z-index: 2;
-    margin: 0 2% 2% 2%; 
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    padding: 0 2vw 2vw 2vw;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.fotterbg {
+    width: 96vw; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    background-color: black;
+    background-image: url(contents/giphy2.gif);
+    z-index: 2;
     overflow: hidden;
     box-sizing: border-box;
     border-radius: 20px;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 
 .fottglass{
     position: absolute;
@@ -580,6 +635,37 @@ img.yt:hover{
     display: block; /* Show button when scrolled to bottom */
 }
 
+.c_grade{
+    position: relative;
+    width: 100%;
+    transition: top 0.5s, font-size 0.5s;
+    left: 0;
+    padding: 0 2vw 2vw 2vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  repeat(1, minmax(0, 35.7vw));;
+    gap: 2vw;
+}
+
+.no_grade{
+    width: 63.4vw;
+    border-radius: 20px;
+    grid-column:1 / 3 ;
+    grid-row: 1 / auto;
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide_to_See{
+    width: 30.7vw;
+    border-radius: 20px;
+    grid-column:3 / 4 ;
+    grid-row: 1 / auto;
+    background-color: black;
+}
+
+
 
 /* Tab view */
 
@@ -635,6 +721,16 @@ img.yt:hover{
         left: 2%;
     }
 }
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Hide slider input visually */
+    opacity: 0;
+}
+
+
 
 
 
@@ -795,6 +891,28 @@ img.yt:hover{
         grid-row: 1 / auto;
     }
 
+    .c_grade{
+        position: relative;
+        width: 100%;
+        transition: top 0.5s, font-size 0.5s;
+        left: 0;
+        padding: 0 2vw 2vw 2vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:  repeat(18, minmax(0, 1vw));;
+        gap: 2vw;
+    }
+    
+    .no_grade{
+        width: 96vw;
+        border-radius: 10px;
+        grid-column:1 / 3 ;
+        grid-row: 1 / auto;
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     .x-icon {
         width: 10vw;
         transition: width 0.1s;
@@ -812,6 +930,12 @@ img.yt:hover{
     .crs {
         font-size: 10px;
     
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .slide_to_See {
+        display: none;
     }
 }
 

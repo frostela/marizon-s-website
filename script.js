@@ -143,4 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
       handleVideoPlayback();
     }
   });
+
+ 
+
 });
