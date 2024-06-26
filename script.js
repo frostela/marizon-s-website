@@ -140,10 +140,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("resize", () => {
     if (isMobileOrTablet()) {
-      handleVideoPlayback();
+        handleVideoPlayback();
     }
-  });
+});
 
- 
+const container = document.querySelector('.container');
+const slider = document.querySelector('.slider');
+
+slider.addEventListener('input', (e) => {
+    let value = e.target.value;
+    if (value > 96) {
+        value = 96; // Cap the value at 64%
+    }
+    container.style.setProperty('--position', `${value}%`);
+});
+
 
 });
