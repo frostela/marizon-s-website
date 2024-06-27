@@ -155,5 +155,4 @@ slider.addEventListener('input', (e) => {
     container.style.setProperty('--position', `${value}%`);
 });
 
-
 });
