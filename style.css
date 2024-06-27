@@ -1173,6 +1173,10 @@ img.yt:hover{
         grid-row: 57 / auto;
     }
 
+    .my_work_h{
+        font-size: 9vw;
+    }
+
     .j_com_video {
         width: 100%;
         border-radius: 15px;
@@ -1303,7 +1307,7 @@ img.yt:hover{
     .mainsubtitle{
         color: #ffffff;
         font-size:110% ;
-        font-weight: 50;
+        font-weight: 150;
         text-align: left;
         transition: font-size 0.5s;
         line-height: 150%;
