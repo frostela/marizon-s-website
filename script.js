@@ -140,19 +140,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("resize", () => {
     if (isMobileOrTablet()) {
-        handleVideoPlayback();
+      handleVideoPlayback();
     }
-});
+  });
 
-const container = document.querySelector('.container');
-const slider = document.querySelector('.slider');
+  const container = document.querySelector('.container');
+  const slider = document.querySelector('.slider');
 
-slider.addEventListener('input', (e) => {
+  slider.addEventListener('input', (e) => {
     let value = e.target.value;
     if (value > 96) {
-        value = 96; // Cap the value at 64%
+      value = 96; // Cap the value at 64%
     }
     container.style.setProperty('--position', `${value}%`);
-});
+  });
+
+  const videoBefore = document.getElementById('videoBefore');
+  const videoAfter = document.getElementById('videoAfter');
+
+  // Function to sync the videos
+  const syncVideos = () => {
+    const timeDiff = Math.abs(videoBefore.currentTime - videoAfter.currentTime);
+    if (timeDiff > 0.1) {
+      if (videoBefore.currentTime > videoAfter.currentTime) {
+        videoAfter.currentTime = videoBefore.currentTime;
+      } else {
+        videoBefore.currentTime = videoAfter.currentTime;
+      }
+    }
+  };
+
+  // Event listeners to sync the videos on play, pause, and timeupdate
+  const syncEventListener = () => {
+    videoBefore.addEventListener('play', syncVideos);
+    videoAfter.addEventListener('play', syncVideos);
+    videoBefore.addEventListener('pause', syncVideos);
+    videoAfter.addEventListener('pause', syncVideos);
+    videoBefore.addEventListener('timeupdate', syncVideos);
+    videoAfter.addEventListener('timeupdate', syncVideos);
+  };
+
+  syncEventListener();
+
+  // Initial sync
+  syncVideos();
+
+  // Event listener to sync the videos when the page becomes visible again
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+      syncVideos();
+      videoBefore.play();
+      videoAfter.play();
+    }
+  });
 
 });
