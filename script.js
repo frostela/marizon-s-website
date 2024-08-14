@@ -160,39 +160,32 @@ document.addEventListener("DOMContentLoaded", function () {
   const videoAfter = document.getElementById('videoAfter');
 
   // Function to sync the videos
-  const syncVideos = () => {
-    const timeDiff = Math.abs(videoBefore.currentTime - videoAfter.currentTime);
-    if (timeDiff > 0.1) {
-      if (videoBefore.currentTime > videoAfter.currentTime) {
-        videoAfter.currentTime = videoBefore.currentTime;
-      } else {
-        videoBefore.currentTime = videoAfter.currentTime;
-      }
+  function syncVideos() {
+    if (Math.abs(videoBefore.currentTime - videoAfter.currentTime) > 0.1) {
+      // If the difference is greater than 0.1 seconds, synchronize the videos
+      videoAfter.currentTime = videoBefore.currentTime;
     }
-  };
+  }
 
-  // Event listeners to sync the videos on play, pause, and timeupdate
-  const syncEventListener = () => {
-    videoBefore.addEventListener('play', syncVideos);
-    videoAfter.addEventListener('play', syncVideos);
-    videoBefore.addEventListener('pause', syncVideos);
-    videoAfter.addEventListener('pause', syncVideos);
-    videoBefore.addEventListener('timeupdate', syncVideos);
-    videoAfter.addEventListener('timeupdate', syncVideos);
-  };
+  // Event listener to sync videos on time update
+  videoBefore.addEventListener('timeupdate', syncVideos);
+  videoAfter.addEventListener('timeupdate', syncVideos);
 
-  syncEventListener();
-
-  // Initial sync
-  syncVideos();
-
-  // Event listener to sync the videos when the page becomes visible again
-  document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') {
-      syncVideos();
-      videoBefore.play();
-      videoAfter.play();
-    }
+  // Optionally, sync them on loop
+  videoBefore.addEventListener('ended', () => {
+    videoAfter.currentTime = 0;
+    videoAfter.play();
+    videoBefore.play();
   });
+
+  videoAfter.addEventListener('ended', () => {
+    videoBefore.currentTime = 0;
+    videoBefore.play();
+    videoAfter.play();
+  });
+
+  // Ensure videos are preloaded
+  videoBefore.preload = 'auto';
+  videoAfter.preload = 'auto';
 
 });
