@@ -262,6 +262,40 @@ nav span {
     color: black;
 }
 
+.slide-to-see-gif{
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    background-color: black;
+    background-image: url(contents/slide-to-see.gif);
+    z-index: 2;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide-glass{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    display: flex ;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+    background-color: hsla(0, 0%, 0%, 0.534);
+    z-index: 4;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: hsla(0, 0%, 100%, 0.158)
+}
+
+
 .my_work_h{
     color: #ffffff;
     font-size: 5vw;
@@ -736,92 +770,27 @@ img.yt:hover{
     grid-template-rows: 1fr;
     padding-right: 2vw;
 }
-.slide_to_See{
+
+.rewind_video{
     width: 26vw;
     border-radius: 20px;
     grid-column:3 / 4 ;
     grid-row: 1 / auto;
     background-color: black;
     margin:2vw 0 2vw 0;
-}
-.slide-to-see-gif{
-    width: 100%; /* Adjust width as needed */
-    height: 100%; /* Adjust height as needed */
-    background-color: black;
-    background-image: url(contents/slide-to-see.gif);
-    z-index: 2;
-    overflow: hidden;
-    box-sizing: border-box;
-    border-radius: 20px;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.slide-glass{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 80%;
-    transform: translate(-50%, -50%);
-    align-items: center;
-    justify-content: center;
-    display: flex ;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    border-radius: 20px;
-    background-color: hsla(0, 0%, 0%, 0.534);
-    z-index: 4;
-    box-sizing: border-box;
-    border: 1px solid;
-    border-color: hsla(0, 0%, 100%, 0.158)
-}
-
-@supports (backdrop-filter: blur(3em)) {
-    .slide-glass {
-        background: hsla(0, 0%, 0%, 0.041);
-        backdrop-filter: blur(0.5em);
-    }
-    
-}
-
-.slide-h{
-    color: #ffffff;
-    transition: font-size 0.5s;
-    z-index: 5;
-    text-align: center;
-    position: relative;
-}
-
-.Slide{
-    position: relative;
-    font-size: 7vw;
-    font-weight: 200;
-    transition: font-size 0.5s;
-    font-family: 'Black_Emerald', 'Helvetica Neue', Helvetica, arial;
-    top:5%;
-}
-
-.To-see-the-magic{
-    position: relative;
-    font-size: 2vw;
-    font-weight: 150;
-    transition: font-size 0.5s;
-    font-family: 'Black_Emerald', 'Helvetica Neue', Helvetica, arial;
-    top:5%;
+    cursor: pointer;
 }
 
 .border-rd {
     position: relative;
     overflow: hidden;
-    background-color: transparent; /* Make background fully transparent */
+    background-color: transparent;
     width: 68vw;
     grid-column: 1 / 3;
     grid-row: 1 / auto;
     z-index: 101;
     border-radius: 20px;
     margin: 2vw 2vw 2vw 2vw;
-    /* Simulate border with box-shadow */
     box-shadow: 0 0 0 2vw rgb(255, 255, 255);
 }
 .container {

@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     ".mount_video": "https://www.instagram.com/p/Cuw7gtkgLLC/",
     ".dj_video": "https://www.instagram.com/reel/CoCyW-hDQb4/",
     ".gym_video": "https://www.instagram.com/reel/CqQb8U6DkY8/",
-    ".drinks2_video": "https://www.instagram.com/reel/CsN3ShbggKC/"
+    ".drinks2_video": "https://www.instagram.com/reel/CsN3ShbggKC/",
+    ".rewind_video": "https://www.instagram.com/reel/C1e2B47S4h9/"
   };
 
   Object.keys(videoLinks).forEach(selector => {
