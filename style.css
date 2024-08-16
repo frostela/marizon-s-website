@@ -767,7 +767,7 @@ img.yt:hover{
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    /* grid-template-rows: 1fr; */
     padding-right: 2vw;
 }
 
@@ -779,6 +779,7 @@ img.yt:hover{
     background-color: black;
     margin:2vw 0 2vw 0;
     cursor: pointer;
+    /* background-image: url(contents/rewind_bur.png); */
 }
 
 .border-rd {
@@ -876,15 +877,19 @@ img.yt:hover{
 }
 
 .slide_title{
-    position: relative;
+    position: absolute;
     left: 4vw;
-    bottom: 8vw;
+    bottom: 4vw;
+    grid-column: 1/ 3;
+    grid-row: 1 / auto;
 }
 
 .mini_title{
-    position: relative;
-    left: 38vw;
-    bottom: 8vw;
+    position: absolute;
+    left: 2vw;
+    bottom: 4vw;
+    grid-column:3 / 4 ;
+    grid-row: 1 / auto;
 }
 /* Tab view */
 
@@ -1038,15 +1043,15 @@ img.yt:hover{
     }
 
     .slide_title{
-        position: relative;
+        position: absolute;
         left: 4vw;
-        bottom: 8.5vw;
+        bottom: 4vw;
     }
     
     .mini_title{
-        position: relative;
-        left: 38vw;
-        bottom: 8.5vw;
+        position: absolute;
+        left: 2vw;
+        bottom: 4vw;
     }
 
 }
@@ -1182,7 +1187,7 @@ img.yt:hover{
         border-radius: 15px;
         grid-column: 2 / 3;
         grid-row: 28 / auto;
-        background-image: url(contents/);
+        background-image: url(contents/drinks_blur_small.png);
     }
 
     .b_mid_container {
@@ -1362,10 +1367,11 @@ img.yt:hover{
         left: 2.5vw;
     }
     .slide_title{
-        position: relative;
+        position: absolute;
         left: 4vw;
-        bottom: 10vw;
-        z-index: 1000;
+        bottom: 4vw;
+        grid-column: 1/ 3;
+        grid-row: 1 / auto;
     }
     
 }
