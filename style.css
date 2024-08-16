@@ -874,6 +874,18 @@ img.yt:hover{
     z-index: 104;
     box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
 }
+
+.slide_title{
+    position: relative;
+    left: 4vw;
+    bottom: 8vw;
+}
+
+.mini_title{
+    position: relative;
+    left: 38vw;
+    bottom: 8vw;
+}
 /* Tab view */
 
 @media (min-width: 768px) and (max-width: 1070px) {
@@ -1025,6 +1037,18 @@ img.yt:hover{
         left: 1.5vw;
     }
 
+    .slide_title{
+        position: relative;
+        left: 4vw;
+        bottom: 8.5vw;
+    }
+    
+    .mini_title{
+        position: relative;
+        left: 38vw;
+        bottom: 8.5vw;
+    }
+
 }
 
 .slider {
@@ -1158,7 +1182,7 @@ img.yt:hover{
         border-radius: 15px;
         grid-column: 2 / 3;
         grid-row: 28 / auto;
-        background-image: url(contents/drinks_blur_small.png);
+        background-image: url(contents/);
     }
 
     .b_mid_container {
@@ -1337,10 +1361,20 @@ img.yt:hover{
         grid-row: 19 / auto;
         left: 2.5vw;
     }
+    .slide_title{
+        position: relative;
+        left: 4vw;
+        bottom: 10vw;
+        z-index: 1000;
+    }
+    
 }
 
 @media screen and (max-width: 767px) {
     .slide_to_See {
+        display: none;
+    }
+    .mini_title{
         display: none;
     }
 }
