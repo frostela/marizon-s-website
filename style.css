@@ -266,7 +266,7 @@ nav span {
     width: 100%; /* Adjust width as needed */
     height: 100%; /* Adjust height as needed */
     background-color: black;
-    background-image: url(contents/slide-to-see.gif);
+    background-image: url(contents/my_works.png);
     z-index: 2;
     overflow: hidden;
     box-sizing: border-box;
@@ -567,6 +567,9 @@ button.nav_toggle {
     }
 }
 
+.letsc_video{
+    width: 100%;
+}
 
 footer {
     display: flex;
@@ -581,10 +584,9 @@ footer {
 }
 
 .fotterbg {
-    width: 96vw; /* Adjust width as needed */
-    height: 100%; /* Adjust height as needed */
+    width: 96vw; 
+    height: 100%; 
     background-color: black;
-    background-image: url(contents/giphy2.gif);
     z-index: 2;
     overflow: hidden;
     box-sizing: border-box;
