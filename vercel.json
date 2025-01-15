@@ -4,11 +4,9 @@
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/about", "destination": "/about.html" }
   ],
-  "functions": {
-    "api/**/*": {
-      "runtime": "edge",
-      "regions": ["sgp1"]
-    }
-  }
+
+  "regions": ["sgp1"]
+
+
 }
 
