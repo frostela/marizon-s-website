@@ -6,7 +6,9 @@
   ],
   "functions": {
     "api/**/*": {
+      "runtime": "edge",
       "regions": ["sgp1"]
     }
   }
 }
+
