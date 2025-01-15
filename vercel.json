@@ -1,8 +1,12 @@
 {
-    "rewrites": [
-      { "source": "/", "destination": "/index.html" },
-      { "source": "/contact", "destination": "/contact.html" },
-      { "source": "/about", "destination": "/about.html" }
-    ]
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/about", "destination": "/about.html" }
+  ],
+  "functions": {
+    "api/**/*": {
+      "regions": ["sgp1"]
+    }
   }
-  
+}
