@@ -459,7 +459,7 @@ nav span {
     position: fixed;
     inset: 0 0 0 0%;
     background: hsla(0, 0%, 0%, 0.534);
-    z-index: 5;
+    z-index: 1005;
     display: flex;
     text-decoration: none;
     flex-direction: column;
