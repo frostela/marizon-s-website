@@ -37,17 +37,41 @@
 
   <div class="loader"></div>
 
+  <div class="update-modal-overlay" id="updateModalOverlay">
+    <div class="update-modal">
+      <h2>We're Upgrading! 🚧</h2>
+      <p>
+        This website is currently getting a fresh new look — version 2.0 is on its way.
+        Some things might look a little rough around the edges for the next few days
+        while we work on it. Thanks for your patience!
+      </p>
+      <button id="updateModalOkBtn">Got it</button>
+    </div>
+  </div>
+
   <header>
     <nav>
       <a href="./" target="_self"><img src="contents/logo.png" fetchpriority="high" alt="logo_image" class="logo"></a>
-      <a href="./" target="_self" class='content_a'>
-        <div class="content">
-          <h1>MARIZONX</h1>
-        </div>
-      </a>
+
       <button class="nav_toggle" aria-controls="primary-navigation" aria-expanded="false">
-        <img src="contents/manu_barimg.png" fetchpriority="high" alt="menubar" class="menubar">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </button>
+
+      <div class="nav-overlay"></div>
+
+      <ul id="primary-navigation" class="primary-navigation">
+        <li class="active">
+          <a href="./" target="_self">Home</a>
+        </li>
+        <li>
+          <a href="./about" target="_self">About</a>
+        </li>
+        <li>
+          <a href="#" id="contactMeButton">Contact</a>
+        </li>
+      </ul>
     </nav>
 
     <article itemscope itemtype="https://schema.org/Article">
@@ -57,29 +81,8 @@
       <meta itemprop="image" content="https://marizonx.com/contents/logo.png">
       <meta itemprop="publisher" content="Marizonx">
     </article>
-
-    <div class="manu_container">
-      <ul id="primary-navigation" data-visible="false" class="primary-navigation">
-        <button class="back-butt" aria-controls="primary-navigation" aria-expanded="false">
-          <img class="x-icon" src="contents/x_icon.svg" alt="x">
-        </button>
-        <li class="active">
-          <a href="./" target="_self"><span aria-hidden="true"></span>Home
-          </a>
-        </li>
-        <li>
-          <a href="./about" target="_self"><span aria-hidden="true"></span>About
-          </a>
-        </li>
-        <li>
-          <a id="contactMeButton" href="#"><span aria-hidden="true"></span>Contact
-          </a>
-        </li>
-      </ul>
-    </div>
   </header>
-
-
+  
   <main>
     <div class="top-container">
 
@@ -88,10 +91,7 @@
         <source src="contents/Main_Video-Small.mp4" type="video/mp4" media="(max-width: 767px)">
       </video>
 
-      <h2 class="main_title">MY WORKS</h2>
-      <HR class='main_line'>
-      </HR>
-      <h4 class="main_subtitle">Inc. client videos</h4>
+      <h2 class="main_title">My Portfolio</h2>
 
     </div>
 

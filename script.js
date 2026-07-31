@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  const updateModalOverlay = document.getElementById('updateModalOverlay');
+  const updateModalOkBtn = document.getElementById('updateModalOkBtn');
+
+  // Show only once per browser (comment out the if-check below if you want it every visit)
+  // if (!sessionStorage.getItem('updateNoticeSeen')) {
+  //   updateModalOverlay.classList.remove('hidden');
+  // } else {
+  //   updateModalOverlay.classList.add('hidden');
+  // }
+
+  updateModalOkBtn.addEventListener('click', () => {
+    updateModalOverlay.classList.add('hidden');
+    sessionStorage.setItem('updateNoticeSeen', 'true');
+  });
+
   // Video click event listeners
   const videoLinks = {
     ".color_flim_video": "https://www.instagram.com/p/CxdPxCiST7_/",
@@ -29,35 +45,42 @@ document.addEventListener("DOMContentLoaded", function () {
     navbar.style.opacity = opacity.toFixed(2);
   });
 
-  // Burger menu toggle
+  // Burger menu toggle --------------------------------------------------------------------------------------------------------
   const primaryNav = document.querySelector('.primary-navigation');
   const navToggle = document.querySelector('.nav_toggle');
   const backButton = document.querySelector('.back-butt');
+  const overlay = document.querySelector('.nav-overlay');
+
+  function openNav() {
+    primaryNav.classList.add('open');
+    navToggle.classList.add('active');
+    overlay.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeNav() {
+    primaryNav.classList.remove('open');
+    navToggle.classList.remove('active');
+    overlay.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
 
   navToggle.addEventListener('click', () => {
-    const visibility = primaryNav.getAttribute('data-visible');
-    if (visibility === "false" || visibility === null) {
-      primaryNav.setAttribute('data-visible', true);
-      navToggle.setAttribute('aria-expanded', true);
-    } else {
-      primaryNav.setAttribute('data-visible', false);
-      navToggle.setAttribute('aria-expanded', false);
-    }
+    const isOpen = primaryNav.classList.contains('open');
+    isOpen ? closeNav() : openNav();
   });
 
-  backButton.addEventListener('click', () => {
-    primaryNav.setAttribute('data-visible', false);
-    navToggle.setAttribute('aria-expanded', false);
-  });
+  if (backButton) {
+    backButton.addEventListener('click', closeNav);
+  }
+
+  overlay.addEventListener('click', closeNav);
 
   document.querySelectorAll('.primary-navigation a').forEach(link => {
-    link.addEventListener('click', () => {
-      primaryNav.setAttribute('data-visible', false);
-      navToggle.setAttribute('aria-expanded', false);
-    });
+    link.addEventListener('click', closeNav);
   });
 
-  // Loader
+  // Loader -------------------------------------------------------------------------------------------------------------------------------
   window.addEventListener("load", () => {
     const loader = document.querySelector(".loader");
     loader.classList.add("loader-hidden");
