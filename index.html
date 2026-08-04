@@ -69,58 +69,38 @@
   </header>
 
   <main>
-    <div class="top-container">
+    <section class="top-container">
 
-      <video autoplay loop muted class="bgvideo" loading="lazy">
-        <source src="contents/main_video.mp4" fetchpriority="high" type="video/mp4" media="(min-width: 768px)">
-        <source src="contents/Main_Video-Small.mp4" type="video/mp4" media="(max-width: 767px)">
+      <video loop muted class="bgvideo" loading="lazy" preload="metadata" poster="/contents/video-posters/main_video_blur.png">
+        <source src="contents/videos/main_video.mp4" fetchpriority="high" type="video/mp4" media="(min-width: 768px)">
+        <source src="contents/videos/Main_Video-Small.mp4" type="video/mp4" media="(max-width: 767px)">
       </video>
 
-      <h2 class="main_title">My Portfolio</h2>
+      <div class="texts">
+        <h4>Welcome to</h4>
+        <h2 class="main_title">My Portfolio</h2>
+      </div>
+    </section>
 
-    </div>
-
-    <div class="a_mid_container">
+    <section class="a_mid_container">
 
       <div class="video-cards">
-        <video autoplay loop muted class="mount_video" loading="lazy">
-          <source src="contents/Mount.mp4" fetchpriority="high" type="video/mp4" media="(min-width: 768px)">
-          <source src="contents/Mount_small.mp4" type="video/mp4" media="(max-width: 767px)">
+        <video loop muted class="mount_video" loading="lazy" preload="metadata" poster="/contents/video-posters/travel1-blur.png"> 
+          <source src="contents/videos/travel1-PC.mp4" fetchpriority="high" type="video/mp4" media="(min-width: 768px)">
+          <source src="contents/videos/travel1-phone.mp4" type="video/mp4" media="(max-width: 767px)">
         </video>
         <div class="texts">
           <h2 class="headline">Travel Flim</h2>
           <HR class='mainline'>
           </HR>
-          <h4 class="mainsubtitle">Arunachal Pradesh</h4>
-        </div>
-      </div>
-      <!-- <div class="my_works_img">
-        <div class="slide-to-see-gif">
-          <div class="slide-glass">
-            <h1 class="my_work_h">
-              My works
-            </h1>
-          </div>
-        </div>
-      </div> -->
-
-      <div class="video-cards">
-        <video autoplay loop muted class="j_com_video" loading="lazy">
-          <source src="contents/j_com.mp4" type="video/mp4" media="(min-width: 768px)">
-          <source src="contents/J_Com_small.mp4" type="video/mp4" media="(max-width: 767px)">
-        </video>
-        <div class="texts">
-          <h2 class="headline">jewellery ad</h2>
-          <HR class='mainline'>
-          </HR>
-          <h4 class="mainsubtitle">ft. Ayushi</h4>
+          <h4 class="mainsubtitle">Meghalaya</h4>
         </div>
       </div>
 
       <div class="video-cards">
-        <video autoplay loop muted class="deb_moidan" loading="lazy">
-          <source src="contents/deb_moidan.mp4" fetchpriority="high" type="video/mp4" media="(min-width: 768px)">
-          <source src="contents/deb_moidan_small.mp4" type="video/mp4" media="(max-width: 767px)">
+        <video loop muted class="deb_moidan" loading="lazy" preload="metadata" poster="/contents/video-posters/deb_moidan_blur.png">
+          <source src="contents/videos/deb_moidan.mp4" fetchpriority="high" type="video/mp4" media="(min-width: 768px)">
+          <source src="contents/videos/deb_moidan_small.mp4" type="video/mp4" media="(max-width: 767px)">
         </video>
         <div class="texts">
           <h2 class="headline">Midnight Maidan</h2>
@@ -130,83 +110,71 @@
         </div>
       </div>
 
+    </section>
+
+    <section id="reels">
+
       <div class="video-cards">
-        <video autoplay loop muted class="drinks_video" loading="lazy">
-          <source src="contents/drinks.mp4" type="video/mp4" media="(min-width: 768px)">
-          <source src="contents/dinks-small.mp4" type="video/mp4" media="(max-width: 767px)">
-        </video>
-        <div class="texts">
-          <h2 class="headline">Event edit</h2>
-          <HR class='mainline'>
-          </HR>
-          <h4 class="mainsubtitle">Jose Cuervo</h4>
-        </div>
-      </div>
-    </div>
 
-    <section id="slider_container">
-
-      <div class="colorg_slider_video">
-
-        <div class="stage" id="stage" tabindex="0" role="slider" aria-label="Drag to compare two videos"
-          aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-
-          <video id="vidRaw" class="layer-raw" muted playsinline preload="metadata">
-            <!-- PC / desktop source, ~720p -->
-            <source data-src="contents/no_grade.mp4" media="(min-width: 768px)">
-            <!-- Mobile source, ~480p -->
-            <source data-src="contents/no_Grade_small.mp4">
+        <div class="gym_video">
+          <video loop muted loading="lazy" class="myVideo" preload="metadata" poster="/contents/video-posters/Oppo-blur.png">
+            <source src="contents/videos/Oppo-PC.mp4" type="video/mp4" media="(min-width: 768px)">
+            <source src="contents/videos/oppo-phone.mp4" type="video/mp4" media="(max-width: 767px)">
           </video>
-
-          <div class="layer-graded" id="layerGraded">
-            <video id="vidGraded" muted playsinline preload="metadata">
-              <!-- PC / desktop source, ~720p -->
-              <source data-src="contents/graded.mp4" media="(min-width: 768px)">
-              <!-- Mobile source, ~480p -->
-              <source data-src="contents/graded_small.mp4">
-            </video>
+          <div class="texts">
+            <h2 class="headline">UGC AD</h2>
+            <HR class='mainline'>
+            </HR>
+            <h4 class="mainsubtitle">OPPO Mobile</h4>
           </div>
-
-          <div class="handle" id="handle">
-            <div class="wire"></div>
-            <div class="knob"></div>
-          </div>
-
-          <button class="play-btn" id="playBtn" type="button" aria-label="Play comparison">
-            <span class="icon"></span>Play
-          </button>
         </div>
 
-
-        <div class="texts">
-          <h2 class="headline">Slide</h2>
-          <HR class='mainline'>
-          </HR>
-          <h4 class="mainsubtitle">to see power of Color Grading</h4>
-        </div>
-
-      </div>
-
-      <div class="rewind_video">
-        <video autoplay loop muted loading="lazy" class="myVideo">
-          <source src="contents/2023_rewind.mp4" type="video/mp4" media="(min-width: 768px)">
+        <video loop muted class="drinks_video" loading="lazy" preload="metadata" poster="/contents/video-posters/LQR43-blur.png">
+          <source src="contents/videos/LQR43-PC.mp4" type="video/mp4" media="(min-width: 768px)">
+          <source src="contents/videos/LQR43-phone.mp4" type="video/mp4" media="(max-width: 767px)">
         </video>
         <div class="texts">
-          <h2 class="headline">Rewind</h2>
+          <h2 class="headline">Drinks AD</h2>
           <HR class='mainline'>
           </HR>
-          <h4 class="mainsubtitle">of 2023</h4>
+          <h4 class="mainsubtitle">licor 43</h4>
+        </div>
+      </div>
+
+      <div class="video-cards">
+        <video loop muted class="drinks_video" loading="lazy" preload="metadata" poster="/contents/video-posters/LQR43merch-blur.png">
+          <source src="contents/videos/LQR43merch-PC.mp4" type="video/mp4" media="(min-width: 768px)">
+          <source src="contents/videos/LQR43merch-phone.mp4" type="video/mp4" media="(max-width: 767px)">
+        </video>
+        <div class="texts">
+          <h2 class="headline">Merch AD</h2>
+          <HR class='mainline'>
+          </HR>
+          <h4 class="mainsubtitle">licor 43</h4>
+        </div>
+      </div>
+
+      <div class="video-cards">
+        <video loop muted class="drinks_video" loading="lazy" preload="metadata" poster="/contents/video-posters/Noise-blur.png">
+          <source src="contents/videos/Noise-PC.mp4" type="video/mp4" media="(min-width: 768px)">
+          <source src="contents/videos/NOISE-phone.mp4" type="video/mp4" media="(max-width: 767px)">
+        </video>
+        <div class="texts">
+          <h2 class="headline">UGC AD</h2>
+          <HR class='mainline'>
+          </HR>
+          <h4 class="mainsubtitle">Noise Headphone</h4>
         </div>
       </div>
 
     </section>
 
-    <div class="b_mid_container">
+    <section class="b_mid_container">
 
       <div class="didi_reel">
-        <video autoplay loop muted loading="lazy" class="myVideo">
-          <source src="contents/didi_reel.mp4" type="video/mp4" media="(min-width: 768px)">
-          <source src="contents/didi_reel_small.mp4" type="video/mp4" media="(max-width: 767px)">
+        <video loop muted loading="lazy" class="myVideo" preload="metadata" poster="/contents/video-posters/josec-blur.png">
+          <source src="contents/videos/didi_reel.mp4" type="video/mp4" media="(min-width: 768px)">
+          <source src="contents/videos/didi_reel_small.mp4" type="video/mp4" media="(max-width: 767px)">
         </video>
         <div class="texts">
           <h2 class="headline">Event Edit</h2>
@@ -218,9 +186,9 @@
 
       <div class="mid_div">
         <div class="color_flim_video">
-          <video autoplay loop muted loading="lazy" class="myVideo">
-            <source src="contents/color_flim.mp4" type="video/mp4" media="(min-width: 768px)">
-            <source src="contents/Colors_flims_small.mp4" type="video/mp4" media="(max-width: 767px)">
+          <video loop muted loading="lazy" class="myVideo" preload="metadata" poster="/contents/video-posters/color_flim_blur.png">
+            <source src="contents/videos/color_flim.mp4" type="video/mp4" media="(min-width: 768px)">
+            <source src="contents/videos/Colors_flims_small.mp4" type="video/mp4" media="(max-width: 767px)">
           </video>
           <div class="texts">
             <h2 class="headline">Colors</h2>
@@ -231,9 +199,9 @@
         </div>
 
         <div class="dadu_flim">
-          <video autoplay loop muted loading="lazy" class="myVideo">
-            <source src="contents/dadu_flim.mp4" type="video/mp4" media="(min-width: 768px)">
-            <source src="contents/dadu_flim_small.mp4" type="video/mp4" media="(max-width: 767px)">
+          <video loop muted loading="lazy" class="myVideo" preload="metadata" poster="/contents/video-posters/dadu_flim_blur.png">
+            <source src="contents/videos/dadu_flim.mp4" type="video/mp4" media="(min-width: 768px)">
+            <source src="contents/videos/dadu_flim_small.mp4" type="video/mp4" media="(max-width: 767px)">
           </video>
           <div class="texts">
             <h2 class="headline">Short Story</h2>
@@ -244,20 +212,20 @@
         </div>
       </div>
 
-      <div class="gym_video">
-        <video autoplay loop muted loading="lazy" class="myVideo">
-          <source src="contents/gym.mp4" type="video/mp4" media="(min-width: 768px)">
-          <source src="contents/Gym_small.mp4" type="video/mp4" media="(max-width: 767px)">
+      <div class="video-cards">
+        <video loop muted class="j_com_video" loading="lazy" preload="metadata" poster="/contents/video-posters/j_com_blur.png">
+          <source src="contents/videos/j_com.mp4" type="video/mp4" media="(min-width: 768px)">
+          <source src="contents/videos/J_Com_small.mp4" type="video/mp4" media="(max-width: 767px)">
         </video>
         <div class="texts">
-          <h2 class="headline">Gym Video</h2>
+          <h2 class="headline">jewellery ad</h2>
           <HR class='mainline'>
           </HR>
-          <h4 class="mainsubtitle">ft. Bisal</h4>
+          <h4 class="mainsubtitle">ft. Ayushi</h4>
         </div>
       </div>
 
-    </div>
+    </section>
   </main>
 
   <footer>
