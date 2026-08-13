@@ -102,6 +102,21 @@ document.addEventListener("DOMContentLoaded", function () {
     navToggle.setAttribute('aria-expanded', false);
   });
 
+  const aboutMeButton = document.getElementById('aboutMeButton');
+  aboutMeButton.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const aboutMe = document.getElementById('about_me');
+
+    window.scrollTo({
+      top: aboutMe.offsetTop - 5,
+      behavior: 'smooth'
+    });
+
+    primaryNav.setAttribute('data-visible', false);
+    navToggle.setAttribute('aria-expanded', false);
+  });
+
   document.getElementById("currentYear").innerHTML = new Date().getFullYear();
 
   // Scroll to top button functionality ----------------------------------------------------------------------------------------------------
