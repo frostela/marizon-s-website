@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // Page Update ---------------------------------------------------------------------------------------------
+
   const updateModalOverlay = document.getElementById('updateModalOverlay');
   const updateModalOkBtn = document.getElementById('updateModalOkBtn');
 
@@ -82,42 +84,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
+  // smoothscroll for mobile burger menu -------------------------------------------------------------------------------------------------------------------------------
 
-  // Contact Me button scroll ---------------------------------------------------------------------------------------------------------------
-  const contactMeButton = document.getElementById('contactMeButton');
-  contactMeButton.addEventListener('click', function (event) {
-    event.preventDefault();
-    document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
-    // Close the burger menu if open
+  document.querySelectorAll('#aboutMeButton, #contactMeButton').forEach(btn => {
+  btn.addEventListener('click', function () {
     primaryNav.setAttribute('data-visible', false);
     navToggle.setAttribute('aria-expanded', false);
   });
-
-  const aboutMeButton = document.getElementById('aboutMeButton');
-  aboutMeButton.addEventListener('click', function (event) {
-    event.preventDefault();
-
-    const aboutMe = document.getElementById('about_me');
-
-    window.scrollTo({
-      top: aboutMe.offsetTop - 5,
-      behavior: 'smooth'
-    });
-
-    primaryNav.setAttribute('data-visible', false);
-    navToggle.setAttribute('aria-expanded', false);
-  });
-
-  document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+});
 
   // Scroll to top button functionality ----------------------------------------------------------------------------------------------------
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
@@ -145,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Play only the most-visible section's videos --------------------------------------------------------------------
+  // Play only the most-visible section's videos ----------------------------------------------------------------------------------------------
   const videoSections = document.querySelectorAll('.top-container, .a_mid_container, #reels, .b_mid_container');
   const sectionRatios = new Map();
 

@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
     scroll-behavior: smooth;
+  }
 }
 
 @font-face {
@@ -468,33 +473,45 @@ nav {
     transition: top 0.5s, font-size 0.5s;
     left: 0;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
+    display: flex;
     align-items: stretch;
-}
-
-.b_mid_container .mid_div {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
     gap: 20px;
-    position: relative;
 }
 
-.didi_reel,
-.gym_video,
-.color_flim_video,
-.dadu_flim {
+.vertical_reel{
+    position: relative;
+    flex: 1;
+}
+
+.vertical_reel video {
+    width: 100%;
     height: 100%;
+    border-radius: 20px;
+    background: #000;
+    display: block;
+    object-fit:cover;
+}
+
+.mid_div {
+    display: flex;
+    width: 43%;
+    gap: 20px;
+    flex-direction: column;
     position: relative;
 }
 
-.b_mid_container video {
+.mid_div_reel {
+    aspect-ratio: 16/9;
+    height: 50%;
+    position: relative;
+}
+
+.mid_div_reel video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     border-radius: 20px;
+    display: block;
 }
 
 .color_flim_video,
@@ -504,6 +521,8 @@ nav {
 .drinks2_video {
     cursor: pointer;
 }
+
+/* Loader ------------------------------------------------------------------------------------------------- */
 
 .loader {
     position: fixed;
@@ -566,6 +585,7 @@ nav {
     gap: 150px;
     justify-content: center;
     align-items: center;
+    scroll-margin-top: 0px;
 }
 
 .about-me-text h3{
@@ -938,46 +958,6 @@ img.yt:hover {
         grid-column: 2 / 3;
         grid-row: 28 / auto;
         background-image: url(contents/drinks_blur_small.png);
-    }
-
-    .b_mid_container {
-        width: 100%;
-        z-index: 1;
-        transition: top 0.5s, font-size 0.5s;
-        left: 0;
-        padding: 2vw 2vw 2vw 2vw;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(51, minmax(0, 2vw));
-        gap: 2vw;
-    }
-
-    .didi_reel {
-        width: 100%;
-        border-radius: 15px;
-        grid-column: 2 / 3;
-        grid-row: 1 / auto;
-    }
-
-    .color_flim_video {
-        width: 100%;
-        border-radius: 15px;
-        grid-column: 1 / 3;
-        grid-row: 37 / auto;
-    }
-
-    .dadu_flim {
-        width: 100%;
-        border-radius: 15px;
-        grid-column: 1 / 3;
-        grid-row: 23 / auto;
-    }
-
-    .gym_video {
-        width: 100%;
-        border-radius: 15px;
-        grid-column: 1 / 2;
-        grid-row: 1 / auto;
     }
 
     .x-icon {
