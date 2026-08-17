@@ -239,7 +239,33 @@
     </section>
 
     <section id="about_me">
-      <img src="/contents/marizon_aboutme_pic.png" alt="About_me_picture">
+
+      <div class="aboutMe_image">
+        <img src="/contents/about_me_images/marizon_aboutme_pic.png" id="aboutMe_mainPic" alt="About me main picture">
+
+        <img src="/contents/about_me_images/flying_aboutme_pic.png" id="aboutMe_flying" alt="Me flying picture"
+          class="lightbox-trigger" data-type="video" data-src="/contents/videos/maybeAmAFool.mp4">
+
+        <img src="/contents/about_me_images/meCore_aboutme_pic.png" id="aboutMe_meCore" alt="Me core picture"
+          class="lightbox-trigger" data-type="video" data-src="/contents/videos/meCore.mp4">
+
+        <img src="/contents/about_me_images/note_aboutme_pic.png" id="aboutMe_note" alt="note picture"
+          class="lightbox-trigger" data-type="image" data-src="/contents/about_me_images/note_aboutme_pic_big.png">
+
+        <img src="/contents/about_me_images/selfie_aboutme_pic.png" id="aboutMe_selfie" alt="My selfie"
+          class="lightbox-trigger" data-type="image" data-src="/contents/about_me_images/selfie_aboutme_pic_big.png">
+
+        <img src="/contents/about_me_images/toriGate_aboutme_pic.png" id="aboutMe_toriGate"
+          alt="Me under Tori Gate picture" class="lightbox-trigger" data-type="image"
+          data-src="/contents/about_me_images/toriGate_aboutme_pic_big.png">
+      </div>
+
+      <!-- put once, near end of <body> -->
+      <div class="lightbox-overlay" id="lightboxOverlay">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+        <div class="lightbox-content" id="lightboxContent"></div>
+      </div>
+
       <div class="about-me-text">
         <h3>About Me</h3>
         <h2>Hi, I’m a professional cinematographer, video editor, and director.

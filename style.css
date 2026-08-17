@@ -601,6 +601,133 @@ nav {
     padding-bottom: 100px;
 }
 
+.aboutMe_image{
+    position: relative;
+}
+
+#aboutMe_mainPic{
+    position: relative;
+    z-index: 1;
+    transform:rotate(-3deg);
+}
+
+#aboutMe_flying{
+    position: absolute;
+    z-index: 2;
+    left: 164px;
+    bottom: -68px;
+    transform:rotate(-7deg);
+}
+
+#aboutMe_meCore{
+    position: absolute;
+    z-index: 2;
+    left: -45px;
+    bottom: 276px;
+    transform:rotate(-6.69deg);
+}
+
+#aboutMe_note{
+    position: absolute;
+    z-index: 2;
+    left: 388px;
+    bottom: 179px;
+}
+
+#aboutMe_selfie{
+    position: absolute;
+    z-index: 3;
+    left: 362px;
+    bottom: -12px;
+    transform:rotate(7.65deg);
+}
+
+#aboutMe_toriGate{
+    position: absolute;
+    z-index: 2;
+    left: -44px;
+    bottom: 85px;
+    transform:rotate(2.68deg);
+}
+
+#aboutMe_flying, #aboutMe_meCore{
+    cursor: url('/contents/play_hover.png') 16 16, pointer;
+}
+
+#aboutMe_note, #aboutMe_selfie, #aboutMe_toriGate{
+    cursor: url('/contents/zoom_hover.png') 16 16, pointer;
+}
+
+/* ===== Lightbox ===== */
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    max-width: 85vw;
+    max-height: 85vh;
+    position: relative;
+    transform: scale(0.92);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.open .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-content img,
+.lightbox-content video {
+    max-width: 85vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    display: block;
+    /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); */
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 24px;
+    right: 32px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 3001;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+body.lightbox-locked {
+    overflow: hidden;
+}
+
+/* Footer Section ------------------------------------------------------------------------------------------------------ */
+
 footer {
     display: flex;
     justify-content: center;

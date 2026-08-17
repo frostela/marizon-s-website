@@ -87,11 +87,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // smoothscroll for mobile burger menu -------------------------------------------------------------------------------------------------------------------------------
 
   document.querySelectorAll('#aboutMeButton, #contactMeButton').forEach(btn => {
-  btn.addEventListener('click', function () {
-    primaryNav.setAttribute('data-visible', false);
-    navToggle.setAttribute('aria-expanded', false);
+    btn.addEventListener('click', function () {
+      primaryNav.setAttribute('data-visible', false);
+      navToggle.setAttribute('aria-expanded', false);
+    });
   });
-});
 
   // Scroll to top button functionality ----------------------------------------------------------------------------------------------------
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
@@ -163,5 +163,64 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   videoSections.forEach(section => sectionObserver.observe(section));
+
+
+  // Lightbox image or video preview section ---------------------------------------------------------------------------------------------
+
+  const lightboxOverlay = document.getElementById('lightboxOverlay');
+  const lightboxContent = document.getElementById('lightboxContent');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const triggers = document.querySelectorAll('.lightbox-trigger');
+
+  function openLightbox(src, type) {
+    lightboxContent.innerHTML = '';
+
+    if (type === 'video') {
+      const video = document.createElement('video');
+      video.src = src;
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      lightboxContent.appendChild(video);
+    } else {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = '';
+      lightboxContent.appendChild(img);
+    }
+
+    lightboxOverlay.classList.add('open');
+    document.body.classList.add('lightbox-locked');
+  }
+
+  function closeLightbox() {
+    lightboxOverlay.classList.remove('open');
+    document.body.classList.remove('lightbox-locked');
+
+    const video = lightboxContent.querySelector('video');
+    if (video) video.pause();
+
+    setTimeout(() => {
+      lightboxContent.innerHTML = '';
+    }, 300);
+  }
+
+  triggers.forEach(el => {
+    el.addEventListener('click', () => {
+      openLightbox(el.dataset.src, el.dataset.type);
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  lightboxOverlay.addEventListener('click', (e) => {
+    if (e.target === lightboxOverlay) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxOverlay.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
 
 });
