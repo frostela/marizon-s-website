@@ -1018,7 +1018,11 @@ img.yt:hover {
     }
 
     .main_title {
-        font-size: 10vw;
+        font-size: 8vw;
+    }
+
+    .top-container h4 {
+        font-size: 1rem;
     }
 
     .my_work_h {
@@ -1126,9 +1130,6 @@ img.yt:hover {
 }
 
 @media (max-width: 440px) {
-    .main_title {
-        font-size: 10vw;
-    }
 
     .conh1 {
         color: #ffffff;

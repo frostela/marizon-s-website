@@ -19,19 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
   //   }
   // });
 
-  // // Navbar's Dynamic Hight
+  // Navbar's Dynamic Hight
 
-  // const navbarForMobile = document.querySelector("nav");
+  const navbarForMobile = document.querySelector("nav");
 
-  // function updateNavbarHeight() {
-  //   document.documentElement.style.setProperty(
-  //     "--navbar-height",
-  //     `${navbarForMobile.offsetHeight}px`
-  //   );
-  // }
+  function updateNavbarHeight() {
+    document.documentElement.style.setProperty(
+      "--navbar-height",
+      `${navbarForMobile.offsetHeight}px`
+    );
+  }
 
-  // updateNavbarHeight();
-  // window.addEventListener("resize", updateNavbarHeight);
+  updateNavbarHeight();
+  window.addEventListener("resize", updateNavbarHeight);
 
   // Navbar opacity on scroll ------------------------------------------------------------------------------------------------
   const navbar = document.querySelector("nav");
