@@ -29,16 +29,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Navbar's Dynamic Hight
+
+  const navbarForMobile = document.querySelector("nav");
+
+  function updateNavbarHeight() {
+    document.documentElement.style.setProperty(
+      "--navbar-height",
+      `${navbarForMobile.offsetHeight}px`
+    );
+  }
+
+  updateNavbarHeight();
+  window.addEventListener("resize", updateNavbarHeight);
+
   // Navbar opacity on scroll ------------------------------------------------------------------------------------------------
   const navbar = document.querySelector("nav");
   const topContainer = document.querySelector(".top-container");
-  const topContainerHeight = topContainer.offsetHeight;
 
-  window.addEventListener("scroll", function () {
+  const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+  function handleScroll() {
+    if (!mediaQuery.matches) return;
+
+    const topContainerHeight = topContainer.offsetHeight;
     const scrollPosition = window.scrollY || window.pageYOffset;
     const opacity = 1 - (scrollPosition / topContainerHeight);
-    navbar.style.opacity = opacity.toFixed(2);
-  });
+
+    navbar.style.opacity = Math.max(0, opacity).toFixed(2);
+  }
+
+  window.addEventListener("scroll", handleScroll);
 
   // Burger menu toggle --------------------------------------------------------------------------------------------------------
   const primaryNav = document.querySelector('.primary-navigation');
