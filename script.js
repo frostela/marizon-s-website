@@ -1,15 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Page Update ---------------------------------------------------------------------------------------------
-
-  const updateModalOverlay = document.getElementById('updateModalOverlay');
-  const updateModalOkBtn = document.getElementById('updateModalOkBtn');
-
-  updateModalOkBtn.addEventListener('click', () => {
-    updateModalOverlay.classList.add('hidden');
-    sessionStorage.setItem('updateNoticeSeen', 'true');
-  });
-
   // Video click event listeners ---------------------------------------------------------------------------------------------
   const videoLinks = {
     ".color_flim_video": "https://www.instagram.com/p/CxdPxCiST7_/",
