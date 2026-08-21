@@ -10,28 +10,28 @@ document.addEventListener("DOMContentLoaded", function () {
   //   ".rewind_video": "https://www.instagram.com/reel/C1e2B47S4h9/"
   // };
 
-  Object.keys(videoLinks).forEach(selector => {
-    const element = document.querySelector(selector);
-    if (element) {
-      element.addEventListener("click", () => {
-        window.open(videoLinks[selector], "_blank");
-      });
-    }
-  });
+  // Object.keys(videoLinks).forEach(selector => {
+  //   const element = document.querySelector(selector);
+  //   if (element) {
+  //     element.addEventListener("click", () => {
+  //       window.open(videoLinks[selector], "_blank");
+  //     });
+  //   }
+  // });
 
-  // Navbar's Dynamic Hight
+  // // Navbar's Dynamic Hight
 
-  const navbarForMobile = document.querySelector("nav");
+  // const navbarForMobile = document.querySelector("nav");
 
-  function updateNavbarHeight() {
-    document.documentElement.style.setProperty(
-      "--navbar-height",
-      `${navbarForMobile.offsetHeight}px`
-    );
-  }
+  // function updateNavbarHeight() {
+  //   document.documentElement.style.setProperty(
+  //     "--navbar-height",
+  //     `${navbarForMobile.offsetHeight}px`
+  //   );
+  // }
 
-  updateNavbarHeight();
-  window.addEventListener("resize", updateNavbarHeight);
+  // updateNavbarHeight();
+  // window.addEventListener("resize", updateNavbarHeight);
 
   // Navbar opacity on scroll ------------------------------------------------------------------------------------------------
   const navbar = document.querySelector("nav");
