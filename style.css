@@ -1168,5 +1168,6 @@ img.yt:hover {
     .about-me-text h2 {
         padding-bottom: 40px;
         font-size: 1.4rem;
+        font-weight: 500;
     }
 }
