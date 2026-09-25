@@ -129,7 +129,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 20px;
+    padding: 15px 20px;
     z-index: 1000;
 }
 
@@ -137,6 +137,15 @@ nav {
     width: 3.2vw;
     height: auto;
     display: block;
+}
+
+nav h1{
+    color: #ffffff;
+    font-family: "ProzaLibre-BoldItalic", Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1;
 }
 
 .nav_toggle {
@@ -294,7 +303,7 @@ nav {
 .top-container h4 {
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(202, 202, 202);
+    color: rgb(230, 230, 230);
 }
 
 .top-container .main_title {
@@ -375,23 +384,11 @@ nav {
     font-weight: 100;
     text-align: left;
     transition: font-size 0.5s;
-    top: 2%;
     line-height: 100%;
 }
 
-.mainline {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    width: 6vw;
-    height: 0;
-    background-color: #42ffed;
-    transition: margin-bottom 0.5s;
-
-}
-
 .mainsubtitle {
-    color: #ffffffc7;
+    color: rgb(218, 218, 218);
     font-family: arial, sans-serif;
     font-size: 1.2vw;
     font-weight: 100;
@@ -784,7 +781,7 @@ img.ig {
 }
 
 img.ig:hover {
-    content: url(contents/1_Instagram_colored_svg_1-512.webp);
+    content: url(contents/instaColoredIcon.png);
 }
 
 img.wapp {
@@ -793,7 +790,7 @@ img.wapp {
 }
 
 img.wapp:hover {
-    content: url(contents/images-removebg-preview.png);
+    content: url(contents/whatsappColoredIcon.png);
 }
 
 img.Lin {
@@ -802,7 +799,7 @@ img.Lin {
 }
 
 img.Lin:hover {
-    content: url(contents/LinkedIn_icon.svg.png);
+    content: url(contents/linkedInColoredIcon.png);
 }
 
 img.yt {
@@ -811,7 +808,7 @@ img.yt {
 }
 
 img.yt:hover {
-    content: url(contents/youtube\ color.png);
+    content: url(contents/youtubeColoredIcon.png);
 }
 
 .ytcl {
