@@ -134,12 +134,13 @@ nav {
 }
 
 .logo {
-    width: 3.2vw;
+    width: 3vw;
     height: auto;
     display: block;
 }
 
 nav h1{
+    font-size: clamp(1.3rem, 1.7vw, 3rem) ;
     color: #ffffff;
     font-family: "ProzaLibre-BoldItalic", Arial, Helvetica, sans-serif;
     position: absolute;
@@ -979,6 +980,7 @@ img.yt:hover {
         background-color: black;
         position: fixed;
         top: 0;
+        padding: 10px 10px;
     }
 
     .menubar {
@@ -987,7 +989,7 @@ img.yt:hover {
     }
 
     .logo {
-        width: 50px;
+        width: 40px;
         height: auto;
         transition: width 0.5s;
     }
