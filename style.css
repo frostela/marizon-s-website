@@ -139,8 +139,8 @@ nav {
     display: block;
 }
 
-nav h1{
-    font-size: clamp(1.3rem, 1.7vw, 3rem) ;
+nav h1 {
+    font-size: clamp(1.3rem, 1.7vw, 3rem);
     color: #ffffff;
     font-family: "ProzaLibre-BoldItalic", Arial, Helvetica, sans-serif;
     position: absolute;
@@ -304,7 +304,7 @@ nav h1{
 .top-container h4 {
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(230, 230, 230);
+    color: rgb(241, 241, 241);
 }
 
 .top-container .main_title {
@@ -1011,6 +1011,11 @@ img.yt:hover {
         z-index: 1;
     }
 
+    .texts {
+        bottom: 15px;
+        left: 15px;
+    }
+
     .main_title {
         font-size: 8vw;
     }
@@ -1052,6 +1057,7 @@ img.yt:hover {
 
     .mainsubtitle {
         font-size: 1rem;
+        font-weight: 600;
     }
 
     .a_mid_container {
@@ -1105,6 +1111,10 @@ img.yt:hover {
         font-size: 2rem;
     }
 
+    footer{
+        padding: 10px;        
+    }
+
     .scroll-to-top {
         bottom: 20px;
         right: 20px;
@@ -1138,10 +1148,6 @@ img.yt:hover {
 
     .headline {
         font-size: 1.4rem;
-    }
-
-    .mainsubtitle {
-        font-size: 0.9rem;
     }
 
     #about_me {
